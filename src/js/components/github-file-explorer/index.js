@@ -32,7 +32,21 @@ module.exports = {
             	function (data) {
             		this.files = data
             	})
-		}
+		},
+
+
+        changePath: function(path) {
+            this.path = "/" + path
+            this.getFiles()
+        },
+
+        goBack: function() {
+            this.path = this.path.split('/').slice(0, -1).join('/');
+            if (this.path === '') this.path = '/';
+        
+            this.getFiles();
+        }
+
 	},
 
 	computed: {
