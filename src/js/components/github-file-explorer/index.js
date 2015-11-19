@@ -31,7 +31,7 @@ module.exports = {
             	this.fullRepoUrl + '/contents' + this.path, 
             	function (data) {
             		this.files = data
-            	}
+            	})
 		}
 	},
 

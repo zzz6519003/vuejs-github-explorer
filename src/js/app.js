@@ -1,6 +1,5 @@
 var Vue = require('vue');
 Vue.config.debug = true;
-
 Vue.use(require('vue-resource'));
 
 new Vue({
@@ -15,7 +14,7 @@ new Vue({
             var splitData = this.fullRepoName.split('/');
             this.username = splitData[0];
             this.repo = splitData[1];
-            
+
             console.group("Vue Data");
             console.log("fullRepoName:", this.fullRepoName);
             console.log("username:", this.username);
@@ -23,11 +22,7 @@ new Vue({
             console.groupEnd("Vue Data");
         }
     },
-
     components: {
         githubFileExplorer: require('./components/github-file-explorer')
     }
-
 });
-
-
